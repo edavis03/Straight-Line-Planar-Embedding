@@ -1,0 +1,88 @@
+Comp150: Graph Theory
+Final Project: Straight-Line Planar Embedding Algorithm Implementation
+Emily Davis
+
+Overview:
+	I chose to implement Chrobak and Payne's algorithm for generating
+	straight-line planar embeddings of graphs in a grid of size (2n - 4) 
+        by (n -2), where n is the number of vertices in the graph.  The
+	algorithm embeds vertices one at a time and is dependent on vertices
+	being fed in in a canonical order that allows each new vertex to be
+	embedded in the outer face. The paper does not go over how to find
+	such a canonical order, so my code assumes that the vertices are
+	already in such an order.  
+
+How to use the program:
+	1) cd into the submission directory
+	2) start up a simple server using the command:
+		"python -m SimpleHTTPServer"
+	3) open up a web browser and go to "localhost:8000/index.html"
+	4) click around and enjoy!
+
+	You will find graph options on the right that can be selected.
+	You can then step through each vertex addition using the "add
+	vertex" button underneath the graph.  You will also notice that
+	the graph is on a grid so that it can be easily verified that the
+	embedding is truly within the (2n-4) by (n-2) grid that the 
+	algorithm promises. Vertices will stop being added once the number of
+	vertices of the graph has been hit.
+
+	
+Datastructure:
+	The paper suggest using a tree of nodes.  Each node corresponds to 
+	a vertex and has the following data attached:
+		data		description
+		id		a number corresponding to the node's 
+				position in the canonical ordering
+		deltax 		the difference in x coordinate between
+				a node and its parent
+		y-coord		the y coordinate of the node
+		x-coord		the x coordinate of the node
+		rightChild	the right child of the node in the tree
+		leftChild	the left chile of the node in the tree
+
+	I chose to store nodes in an array where index corresponded to node
+	order in the canonical ordering.  This allowed me to keep O(1) access
+	to a node whenever I knew its id. 
+
+Something Intersting:
+	The algorithm is very clever in that it is designed so that the 
+	root vertex (with id 1) along with its right child, its right child's 	      right child, etc, create the cycle forming the outer boundary of the
+	so far embedded graph.
+
+	It's also clever in that the left subtree of a vertex v holds all the
+	vertices that must readjust in position as v moves.
+
+Something Disappointing:
+	When I selected this algorithm, I did not realize that it was 
+	dependent on already having a predetermined canonical ordering.
+	I was originally expected to be able to find an embedding for
+	any planar graph, regardless of the order the vertices were 
+	presented in. While the paper's algorithm is still cool, I feel like
+	it loses some of its usefulness without also having an algorithm to
+	construct the ordering.
+
+Challenges
+	The algorithm as presented in the paper has two phases:
+		i)  a phase to find positions of each vertex relative
+		    to its parent
+		ii) a phase to compile these relative locations into 
+		    absolute locations.
+	The algorithm only allowed to absolute locations to be determined
+	once (when the last vertex was added in), and overwrote the deltax 
+	fields in the process.  I wanted to be able to show each step of the 
+	algorithm, which meant that I needed to introduce a new data field, 
+	"x-coord", so that absolute locations of intermediate steps could be 
+	displayed without overwriting the relative locations (which would be
+	needed in future steps).
+
+	This also meant that instead of invoking the second phase of the
+	algorithm only once, I needed to invoke this phase after every 
+	vertex addition to make the graph renderable.   
+
+	Another challenge was trying to understand some bizarre notation
+	in the paper itself.  The paper refered several times to  
+	deltax(v_1, v_2).  However, they defined deltax(v_1) to be the 
+	difference in x coordinate between a node and its parent, so having
+	two parameters to deltax does not make sense.  I found a way around
+	this by simply considering deltax(v_1, v_2) to be a variable.

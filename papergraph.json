@@ -1,0 +1,261 @@
+[
+  {
+    "id": 1,
+    "label": "A",
+    "neighbors": [
+      {
+	"id": 2,
+	"label": "B"
+      },
+      {
+        "id": 3,
+	"label": "C"
+      },
+      {
+	"id": 4,
+	"label": "D"
+      },
+      {
+	"id": 6,
+	"label": "F"
+      },
+      {
+	"id": 8,
+	"label": "H"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "label": "B",
+    "neighbors": [
+      {
+	"id": 1,
+	"label": "A"
+      },
+      {
+	"id": 3,
+	"label": "C"
+      },
+      {
+	"id": 5,
+	"label": "E"
+      },
+      {
+	"id": 9,
+	"label": "I"
+      },
+      {
+	"id": 10,
+	"label": "J"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "label": "C",
+    "neighbors": [
+      {
+        "id": 1,
+	"label": "A"
+      },
+      {
+	"id": 2,
+	"label": "B"
+      },
+      {
+	"id": 4,
+	"label": "D"
+      },
+      {
+	"id": 5,
+	"label": "E"
+      },
+      {
+	"id": 7,
+	"label": "G"
+      },
+      {
+	"id": 9,
+	"label": "I"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "label": "D",
+    "neighbors": [
+      {
+        "id": 1,
+	"label": "A"
+      },
+      {
+	"id": 3,
+	"label": "C"
+      },
+      {
+        "id": 6,
+	"label": "F"
+      },
+      {
+	"id": 7,
+	"label": "G"
+      },
+      {
+	"id": 8,
+	"label": "H"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "label": "E",
+    "neighbors": [
+      {
+	"id": 2,
+	"label": "B"
+      },
+      {
+	"id": 3,
+	"label": "C"
+      },
+      {
+	"id": 9,
+	"label": "I"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "label": "F",
+    "neighbors": [
+      {
+	"id": 1,
+	"label": "A"
+      },
+      {
+	"id": 4,
+	"label": "D"
+      },
+      {
+	"id": 8,
+	"label": "H"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "label": "G",
+    "neighbors": [
+      {
+	"id": 3,
+        "label": "C"
+      },
+      {
+	"id": 4,
+	"label": "D"
+      },
+      {
+	"id": 8,
+	"label": "H"
+      },
+      {
+	"id": 9,
+	"label": "I"
+      },
+      {
+	"id": 11,
+	"label": "K"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "label": "H",
+    "neighbors": [
+      {
+	"id": 1,
+	"label": "A"
+      },
+      {
+	"id": 4,
+	"label": "D"
+      },
+      {
+	"id": 6,
+	"label": "F"
+      },
+      {
+	"id": 7,
+	"label": "G"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "label": "I",
+    "neighbors": [
+      {
+	"id": 2,
+	"label": "B"
+      },
+      {
+	"id": 3,
+	"label": "C"
+      },
+      {
+	"id": 5,
+	"label": "E"
+      },
+      {
+	"id": 7,
+	"label": "G"
+      },
+      {
+	"id": 10,
+	"label": "J"
+      },
+      {
+	"id": 11,
+	"label": "K"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "label": "J",
+    "neighbors": [
+      {
+	"id": 2,
+	"label": "B"
+      },
+      {
+	"id": 9,
+	"label": "I"
+      },
+      {
+	"id": 11,
+	"label": "K"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "label": "K",
+    "neighbors": [
+      {
+	"id": 7,
+	"label": "G"
+      },
+      {
+	"id": 9,
+	"label": "I"
+      },
+      {
+	"id": 10,
+	"label": "J"
+      }
+    ]
+  }
+]
+

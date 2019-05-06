@@ -1,0 +1,221 @@
+[
+  {
+    "id": 1,
+    "label": "A",
+    "neighbors": [
+      {
+	"id": 2,
+	"label": "B"
+      },
+      {
+        "id": 3,
+	"label": "C"
+      },
+      {
+	"id": 5,
+	"label": "E"
+      },
+      {
+	"id": 6,
+	"label": "F"
+      },
+      {
+	"id": 8,
+	"label": "H"
+      },
+      {
+	"id": 9,
+	"label": "I"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "label": "B",
+    "neighbors": [
+      {
+	"id": 1,
+	"label": "A"
+      },
+      {
+	"id": 3,
+	"label": "C"
+      },
+      {
+	"id": 4,
+	"label": "D"
+      },
+      {
+	"id": 9,
+	"label": "I"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "label": "C",
+    "neighbors": [
+      {
+        "id": 1,
+	"label": "A"
+      },
+      {
+	"id": 2,
+	"label": "B"
+      },
+      {
+	"id": 4,
+	"label": "D"
+      },
+      {
+	"id": 5,
+	"label": "E"
+      },
+      {
+	"id": 7,
+	"label": "G"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "label": "D",
+    "neighbors": [
+      {
+        "id": 2,
+	"label": "B"
+      },
+      {
+	"id": 3,
+	"label": "C"
+      },
+      {
+	"id": 7,
+	"label": "G"
+      },
+      {
+	"id": 8,
+	"label": "H"
+      },
+      {
+	"id": 9,
+	"label": "I"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "label": "E",
+    "neighbors": [
+      {
+	"id": 1,
+	"label": "A"
+      },
+      {
+	"id": 3,
+	"label": "C"
+      },
+      {
+	"id": 6,
+	"label": "F"
+      },
+      {
+	"id": 8,
+	"label": "H"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "label": "F",
+    "neighbors": [
+      {
+	"id": 1,
+	"label": "A"
+      },
+      {
+	"id": 5,
+	"label": "E"
+      },
+      {
+	"id": 8,
+	"label": "H"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "label": "G",
+    "neighbors": [
+      {
+	"id": 3,
+        "label": "C"
+      },
+      {
+	"id": 4,
+	"label": "D"
+      },
+      {
+	"id": 5,
+	"label": "E"
+      },
+      {
+	"id": 8,
+	"label": "H"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "label": "H",
+    "neighbors": [
+      {
+	"id": 1,
+	"label": "A"
+      },
+      {
+	"id": 4,
+	"label": "D"
+      },
+      {
+	"id": 5,
+	"label": "E"
+      },
+      {
+	"id": 6,
+	"label": "F"
+      },
+      {
+	"id": 7,
+	"label": "G"
+      },
+      {
+	"id": 9,
+	"label": "I"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "label": "I",
+    "neighbors": [
+      {
+	"id": 1,
+	"label": "A"
+      },
+      {
+	"id": 2,
+	"label": "B"
+      },
+      {
+	"id": 4,
+	"label": "D"
+      },
+      {
+	"id": 8,
+	"label": "H"
+      }
+    ]
+  }
+]
+

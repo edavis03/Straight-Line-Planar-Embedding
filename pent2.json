@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "label": "A",
+    "neighbors": [
+      {
+	"id": 2,
+	"label": "B"
+      },
+      {
+	"id": 4,
+	"label": "D"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "label": "B",
+    "neighbors": [
+      {
+	"id": 1,
+	"label": "A"
+      },
+      {
+	"id": 3,
+	"label": "C"
+      },
+      {
+	"id": 5,
+	"label": "E"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "label": "C",
+    "neighbors": [
+      {
+	"id": 2,
+	"label": "B"
+      },
+      {
+        "id": 4,
+	"label": "D"
+      },
+      {
+	"id": 5,
+	"label": "E"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "label": "D",
+    "neighbors": [
+      {
+        "id": 1,
+        "label": "A"
+      },
+      {
+        "id": 3,
+        "label": "C"
+      },
+      {	
+	"id": 5,
+	"label": "E"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "label": "E",
+    "neighbors": [
+      {
+	"id": 1,
+	"label": "A"
+      },
+      {
+	"id": 3,
+	"label": "C"
+      },
+      {
+	"id": 4,
+	"label": "D"
+      }
+    ]
+  }
+]
+
